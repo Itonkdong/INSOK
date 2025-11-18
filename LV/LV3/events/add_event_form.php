@@ -9,10 +9,17 @@ $form_data = isset($_SESSION['form_data']) ? $_SESSION['form_data'] : [];
 unset($_SESSION['errors']);
 unset($_SESSION['form_data']);
 
+$myArray = ["her1", "her2"];
+list($el1, $el2) = $myArray;
+$matrix = [["el1", "el2"], ["el3", "el4"]];
+
 $current_name = $form_data['name'] ?? '';
+//$current_name = $form_data{"name"} ?? '';
 $current_date = $form_data['date'] ?? '';
 $current_location = $form_data['location'] ?? '';
 $current_type = $form_data['type'] ?? '';
+
+$var = ["key" => ["mt" => "key"]];
 ?>
 
 <!DOCTYPE html>
@@ -40,9 +47,14 @@ $current_type = $form_data['type'] ?? '';
     </div>
 <?php endif; ?>
 
+<?php
+ $current_name = 'adstract';
+?>
+
 <form action="add_event.php" method="POST">
     <label for="name">Name:</label>
-    <input type="text" name="name" id="name" value="<?php echo htmlspecialchars($current_name); ?>" required>
+    <input type="text" name="name" id="name" value="<?php echo $current_name; ?>
+">
     <br/>
     <label for="date">Date:</label>
     <input type="date" name="date" id="date" value="<?php echo htmlspecialchars($current_date); ?>" required>

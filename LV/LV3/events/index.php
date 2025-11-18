@@ -87,10 +87,10 @@ if (!$result) {
     <thead>
     <tr>
         <th>ID</th>
-        <th>Title</th>
+        <th>Name</th>
         <th>Date</th>
-        <th>Priority</th>
-        <th>Status</th>
+        <th>Location</th>
+        <th>Type</th>
         <th>Actions</th>
     </tr>
     </thead>
